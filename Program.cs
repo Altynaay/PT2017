@@ -12,20 +12,24 @@ namespace Student
         {
             public string name;
             public string surname;
-            public int age;
+            public double gpa;
 
-            public Student(string name, string surname, int age)
+            public Student(string name, string surname, double gpa)
             {
                 this.name = name;
                 this.surname = surname;
-                this.age = age;
+                this.gpa = gpa;
+            }
+            public void Write()
+            {
+                Console.WriteLine(this.name + " " + this.surname + " " + this.gpa);
             }
         }
         public static void Main(string[] args)
         {
-            Student a = new Student("Aisultan", "Akhzhan", 99);
-            Student b = new Student("Arsen", "Zhumashev", 17);
-            Console.WriteLine(a.name + " " + b.surname);
+            Student a = new Student("Aisultan", "Akhzhan", 3.0);
+            Student b = new Student("Arsen", "Zhumashev", 3.55);
+            a.Write();
             Console.ReadKey();
 
         }
