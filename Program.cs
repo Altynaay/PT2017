@@ -3,32 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace PrimeNumber1
+
+namespace Student
 {
     class Program
     {
-        static bool isPrime(int a)
+        public class Student
         {
-            if (a == 1)
-                return false;
-            for (int i = 2; i < a; i ++)
-                if (a % i == 0)
-                    return false;
-            return true;
+            public string name;
+            public string surname;
+            public int age;
+
+            public Student(string name, string surname, int age)
+            {
+                this.name = name;
+                this.surname = surname;
+                this.age = age;
+            }
         }
-         public static void Main(string[] args)
-         {
-             int n = args.Length;
-             for (int i = 0; i <n; i++)
-             {
-                 string s = args[i];
-                 int p = int.Parse(s);
- 
-                 if (isPrime(p) == true)
-                 {
-                     Console.WriteLine(p);
-                 }
-             }
-         }
-     }
- }
+        public static void Main(string[] args)
+        {
+            Student a = new Student("Aisultan", "Akhzhan", 99);
+            Student b = new Student("Arsen", "Zhumashev", 17);
+            Console.WriteLine(a.name + " " + b.surname);
+            Console.ReadKey();
+
+        }
+    }
+}
