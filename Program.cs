@@ -22,14 +22,14 @@ namespace Student
             }
             public void Write()
             {
-                Console.WriteLine(this.name + " " + this.surname + " " + this.gpa);
+                return this.name + " " + this.surname + " " + this.gpa;
             }
         }
         public static void Main(string[] args)
         {
             Student a = new Student("Aisultan", "Akhzhan", 3.0);
             Student b = new Student("Arsen", "Zhumashev", 3.55);
-            a.Write();
+            Console.WriteLine(a.Write());
             Console.ReadKey();
 
         }
